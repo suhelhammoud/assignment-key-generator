@@ -1,5 +1,4 @@
 import './style.css'
-
 import Rand from 'rand-seed';
 
 
@@ -21,7 +20,7 @@ const result = document.querySelector<HTMLSpanElement>('#result')!
 
 seedBox.addEventListener('keyup', () => {
   
-  const seed_txt = document.querySelector<HTMLInputElement>('#seed_txt')!.value
+  const seed_txt = document.querySelector<HTMLInputElement>('#seed_txt')!.value.trim()
   
   const result_n = generate_count_hex(seed_txt)
   result.innerText = result_n
@@ -49,8 +48,4 @@ function setdisplays(hNumber:string) {
 	display5.className = baseClass + hNumber[4];
 	display6.className = baseClass + hNumber[5];
 	
-	//document.body.style.backgroundColor = '#' + (s + m + h).toString(16);
 }
-
-// setInterval(setdisplays, 1000);
-// setdisplays();
