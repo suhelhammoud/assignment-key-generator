@@ -19,7 +19,7 @@ export function generate_count_hex(seed: string) {
 const seedBox = document.querySelector<HTMLInputElement>('#seed_txt')!
 const result = document.querySelector<HTMLSpanElement>('#result')!
 
-seedBox.addEventListener('keydown', () => {
+seedBox.addEventListener('keyup', () => {
   
   const seed_txt = document.querySelector<HTMLInputElement>('#seed_txt')!.value
   
